@@ -1,20 +1,19 @@
+import { Link } from "react-router-dom";
+
 function SideBar() {
   return (
     <>
       <div className="col-2">
         <nav className="nav flex-column">
-          <a className="nav-link active" aria-current="page" href="#">
-            Active
-          </a>
-          <a className="nav-link" href="#">
-            Link
-          </a>
-          <a className="nav-link" href="#">
-            Link
-          </a>
-          <a className="nav-link disabled" aria-disabled="true">
-            Disabled
-          </a>
+          <Link className="nav-link active" aria-current="page" to="/">
+            Home
+          </Link>
+          <Link className="nav-link" to="/products">
+            Products
+          </Link>
+          <Link className="nav-link" to="/categories">
+          Categories
+          </Link>
         </nav>
       </div>
     </>

@@ -12,7 +12,7 @@ function Products() {
 
   const buildTable = () => {
     return products.map((element) => (
-      <tr>
+      <tr key={element.id}>
         <th scope="row">{element.id}</th>
         <td>{element.title}</td>
         <td>{element.category}</td>
@@ -27,7 +27,7 @@ function Products() {
             </div>
 
             <div className="col-4" style={{ textAlign: "center" }}>
-              <button className="btn btn-info btn-sm"> view</button>
+              <Link to={element.id} className="btn btn-info btn-sm"> view</Link>
             </div>
           </div>
         </td>

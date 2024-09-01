@@ -5,6 +5,7 @@ import SideBar from "./components/SideBar";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import AddProduct from "./pages/AddProduct";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
                 <Route path="products" element={<Products />}/>
                 <Route path='products/add' element={<AddProduct />} />
                 <Route path="/categories" element={<Products />} />
-
+                <Route path="products/:productId" element = {<ProductDetails />} />
               </Routes>
             </div>
           </div>

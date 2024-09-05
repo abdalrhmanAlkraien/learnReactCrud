@@ -1,6 +1,19 @@
 
 function AddProduct() {
   
+  const url = "http://localhost:9000/products/"
+
+  const addProduct = (productData)=>{
+
+    fetch(url, {
+      method: "POST",
+      body: productData
+    }).then(res=> res.json())
+    .then(data=> {
+      console.log("executed delete response" + data)
+    })
+  }
+
   return (
     <>
       <div>
